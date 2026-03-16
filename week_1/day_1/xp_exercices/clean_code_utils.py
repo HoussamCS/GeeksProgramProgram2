@@ -6,3 +6,8 @@ def normalize_spaces(text: str) -> str:
     if not text:
         return ""
     return " ".join(text.split())
+
+
+def to_title_case(text: str) -> str:
+    """Convert text to title case after space normalization."""
+    return normalize_spaces(text).title()
