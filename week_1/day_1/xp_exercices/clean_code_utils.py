@@ -4,6 +4,7 @@ from typing import Final
 
 
 EXPORTED_HELPERS: Final[list[str]] = ["normalize_spaces", "to_title_case"]
+__all__ = EXPORTED_HELPERS
 
 
 def normalize_spaces(text: str) -> str:
