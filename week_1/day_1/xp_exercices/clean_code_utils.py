@@ -10,7 +10,8 @@ def normalize_spaces(text: str) -> str:
     """Collapse repeated spaces and trim outer spaces."""
     if not text:
         return ""
-    return " ".join(text.split())
+    parts = text.split()
+    return " ".join(parts)
 
 
 def to_title_case(text: str) -> str:
