@@ -1,5 +1,10 @@
 """Small text helpers used for clean-code practice commits."""
 
+from typing import Final
+
+
+EXPORTED_HELPERS: Final[list[str]] = ["normalize_spaces", "to_title_case"]
+
 
 def normalize_spaces(text: str) -> str:
     """Collapse repeated spaces and trim outer spaces."""
