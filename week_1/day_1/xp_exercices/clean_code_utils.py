@@ -17,6 +17,7 @@ def normalize_spaces(text: str) -> str:
     """Collapse repeated spaces and trim outer spaces."""
     if not has_content(text):
         return DEFAULT_EMPTY_RESULT
+    # split() without arguments collapses any run of whitespace.
     parts = text.split()
     return " ".join(parts)
 
