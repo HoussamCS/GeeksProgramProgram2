@@ -13,6 +13,11 @@ def has_content(text: str) -> bool:
     return bool(text and text.strip())
 
 
+def trim_edges(text: str) -> str:
+    """Trim leading and trailing whitespace safely."""
+    return text.strip() if text else DEFAULT_EMPTY_RESULT
+
+
 def normalize_spaces(text: str) -> str:
     """Collapse repeated spaces and trim outer spaces."""
     if not has_content(text):
