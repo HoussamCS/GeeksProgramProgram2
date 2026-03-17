@@ -8,9 +8,14 @@ __all__ = EXPORTED_HELPERS
 DEFAULT_EMPTY_RESULT: Final[str] = ""
 
 
+def has_content(text: str) -> bool:
+    """Return True when text contains at least one non-space character."""
+    return bool(text and text.strip())
+
+
 def normalize_spaces(text: str) -> str:
     """Collapse repeated spaces and trim outer spaces."""
-    if not text:
+    if not has_content(text):
         return DEFAULT_EMPTY_RESULT
     parts = text.split()
     return " ".join(parts)
