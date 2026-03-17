@@ -5,12 +5,13 @@ from typing import Final
 
 EXPORTED_HELPERS: Final[list[str]] = ["normalize_spaces", "to_title_case"]
 __all__ = EXPORTED_HELPERS
+DEFAULT_EMPTY_RESULT: Final[str] = ""
 
 
 def normalize_spaces(text: str) -> str:
     """Collapse repeated spaces and trim outer spaces."""
     if not text:
-        return ""
+        return DEFAULT_EMPTY_RESULT
     parts = text.split()
     return " ".join(parts)
 
