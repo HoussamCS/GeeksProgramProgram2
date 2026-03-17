@@ -23,4 +23,5 @@ def normalize_spaces(text: str) -> str:
 
 def to_title_case(text: str) -> str:
     """Convert text to title case after space normalization."""
-    return normalize_spaces(text).title()
+    normalized_text = normalize_spaces(text)
+    return normalized_text.title()
