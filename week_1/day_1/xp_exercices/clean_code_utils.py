@@ -10,7 +10,7 @@ DEFAULT_EMPTY_RESULT: Final[str] = ""
 
 def has_content(text: str) -> bool:
     """Return True when text contains at least one non-space character."""
-    return bool(text and text.strip())
+    return bool(trim_edges(text))
 
 
 def trim_edges(text: str) -> str:
