@@ -1,3 +1,6 @@
+"""AnagramChecker – validates words and finds anagrams from a word-list file."""
+
+
 class AnagramChecker:
     def __init__(self, word_list_file):
         """Load the word list file into memory."""
