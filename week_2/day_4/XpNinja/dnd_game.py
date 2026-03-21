@@ -1,3 +1,5 @@
+"""D&D Character Generator – creates characters with randomly rolled stats and exports them."""
+
 import random
 import json
 
@@ -8,8 +10,9 @@ class Character:
         self.attributes = self.generate_attributes()
 
     def roll_dice(self):
+        # Roll 4d6 and drop the lowest die (standard D&D ability score method)
         dice = [random.randint(1, 6) for _ in range(4)]
-        return sum(sorted(dice)[1:])  # discard smallest
+        return sum(sorted(dice)[1:])
 
     def generate_attributes(self):
         stats = ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"]
