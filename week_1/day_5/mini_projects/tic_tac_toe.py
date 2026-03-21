@@ -1,3 +1,6 @@
+"""Tic Tac Toe – two-player terminal game."""
+
+
 def display_board(board):
     print("\nTIC TAC TOE")
     print("*" * 17)
@@ -60,7 +63,7 @@ def play():
             print("It's a tie!")
             break
         
-        # Switch player
+        # Alternate between players
         current_player = 'O' if current_player == 'X' else 'X'
 
 
