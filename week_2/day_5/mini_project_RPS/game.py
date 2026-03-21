@@ -1,12 +1,15 @@
-# game.py
+# game.py – Rock Paper Scissors game logic
 import random
 
 class Game:
+    ITEMS = ["rock", "paper", "scissors"]
+    WIN_CONDITIONS = {"rock": "scissors", "scissors": "paper", "paper": "rock"}
+
     def __init__(self):
-        self.items = ["rock", "paper", "scissors"]
+        self.items = self.ITEMS
 
     def get_user_item(self):
-        """Ask the user to select rock, paper, or scissors."""
+        """Prompt the user until a valid choice is entered."""
         while True:
             user_choice = input("Choose (rock/paper/scissors): ").strip().lower()
             if user_choice in self.items:
@@ -14,24 +17,14 @@ class Game:
             print("❌ Invalid choice! Please choose rock, paper, or scissors.")
 
     def get_computer_item(self):
-        """Randomly select the computer's choice."""
+        """Return a random computer choice."""
         return random.choice(self.items)
 
     def get_game_result(self, user_item, computer_item):
-        """Determine and return 'win', 'draw', or 'loss'."""
+        """Return 'win', 'draw', or 'loss' based on the two choices."""
         if user_item == computer_item:
             return "draw"
-
-        win_conditions = {
-            "rock": "scissors",
-            "scissors": "paper",
-            "paper": "rock"
-        }
-
-        if win_conditions[user_item] == computer_item:
-            return "win"
-        else:
-            return "loss"
+        return "win" if self.WIN_CONDITIONS[user_item] == computer_item else "loss"
 
     def play(self):
         """Play one round of the game."""
