@@ -1,7 +1,5 @@
 #Challenge 1: Letter Index Dictionary
 word=input("Enter a word: ")
-letter_index_dict={letter:index for index, letter in enumerate(word)}
-
 letter_index_dict = {}
 
 for index, letter in enumerate(word):
