@@ -42,6 +42,8 @@ print(my_sum([1, 5, 4, 2]))
 # Exercice 5:
 # Find max number in a list
 def find_max(lst):
+    if not lst:
+        raise ValueError("find_max() requires a non-empty list")
     max_num = lst[0]
     for num in lst:
         if num > max_num:
