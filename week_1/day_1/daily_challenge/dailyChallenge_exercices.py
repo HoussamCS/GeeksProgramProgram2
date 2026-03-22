@@ -9,7 +9,7 @@ string = input("Enter a string: ")
 # Part 2
 if len(string) == 10 :
     print("Perfect string")
-if len(string) < 10 :
+elif len(string) < 10 :
     print("short string")
 else:
     print("long string")
