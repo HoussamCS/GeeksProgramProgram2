@@ -27,4 +27,5 @@ for item, cost in items_purchase.items():
 if not affordable_items:
     print("Nothing is affordable")
 else:
+    affordable_items.sort()
     print("Affordable items:", affordable_items)
