@@ -146,6 +146,8 @@ print(sum_over_k(sentence, k))
 # Exercice 14:
 # Average of dictionary values
 def dict_avg(d):
+    if not d:
+        raise ValueError("dict_avg() requires a non-empty dictionary")
     total = 0
     for v in d.values():
         total += v
