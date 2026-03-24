@@ -58,25 +58,22 @@ class Circle:
         return self.radius > other.radius
 
 
-# ✅ Example usage
-c1 = Circle(radius=4)
-c2 = Circle(diameter=10)
-c3 = Circle(radius=2)
+if __name__ == "__main__":
+    c1 = Circle(radius=4)
+    c2 = Circle(diameter=10)
+    c3 = Circle(radius=2)
 
-print(c1)  # Circle(radius=4.00, diameter=8.00, area=50.27)
-print(c2)  # Circle(radius=5.00, diameter=10.00, area=78.54)
+    print(c1)
+    print(c2)
 
-# Addition
-c3_new = c1 + c2
-print(c3_new)  # Circle(radius=9.00, diameter=18.00, area=254.47)
+    c3_new = c1 + c2
+    print(c3_new)
 
-# Comparisons
-print(c1 == c2)  # False
-print(c1 < c2)   # True
-print(c1 > c3)   # True
+    print(c1 == c2)
+    print(c1 < c2)
+    print(c1 > c3)
 
-# Sorting
-circles = [c1, c2, c3, c3_new]
-sorted_circles = sorted(circles)
-for c in sorted_circles:
-    print(c)
+    circles = [c1, c2, c3, c3_new]
+    sorted_circles = sorted(circles)
+    for circle in sorted_circles:
+        print(circle)
