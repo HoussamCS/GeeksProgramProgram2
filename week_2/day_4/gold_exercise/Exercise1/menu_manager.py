@@ -1,8 +1,9 @@
 import json
+from pathlib import Path
 
 class MenuManager:
     def __init__(self, file_path="restaurant_menu.json"):
-        self.file_path = file_path
+        self.file_path = Path(__file__).with_name(file_path)
         try:
             with open(self.file_path, "r") as file:
                 self.menu = json.load(file)
