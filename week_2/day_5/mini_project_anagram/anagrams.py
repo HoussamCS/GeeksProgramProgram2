@@ -1,4 +1,6 @@
 
+from pathlib import Path
+
 from anagram_checker import AnagramChecker
 
 def clean_input(user_input):
@@ -13,7 +15,8 @@ def clean_input(user_input):
     return word
 
 def main():
-    checker = AnagramChecker("words.txt")  # Path to your word list file
+    word_list_path = Path(__file__).with_name("words.txt")
+    checker = AnagramChecker(word_list_path)
 
     while True:
         print("\n🔠 MENU:")
