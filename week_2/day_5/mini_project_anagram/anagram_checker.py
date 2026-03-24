@@ -4,8 +4,8 @@
 class AnagramChecker:
     def __init__(self, word_list_file):
         """Load the word list file into memory."""
-        with open(word_list_file, 'r') as f:
-            self.word_list = [word.strip().lower() for word in f.readlines()]
+        with open(word_list_file, 'r', encoding='utf-8') as file:
+            self.word_list = [word.strip().lower() for word in file if word.strip()]
 
     def is_valid_word(self, word):
         """Check if a word is a valid English word."""
